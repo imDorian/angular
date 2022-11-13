@@ -1,0 +1,19 @@
+<!-- <app-gallery class="container d-flex flex-wrap" [list]="characters" [characterPage]="charactersPage"></app-gallery> -->
+
+<div class="container d-flex justify-content-center gap-3 mt-2">
+
+  <button class="btn btn-outline-primary btn-sm m-1" (click)="previousPage()"><<<</button>
+  <span class="m-1">Page {{charactersPage}}</span>
+  <button class="btn btn-outline-primary btn-sm m-1" (click)="nextPage()">>>></button>
+</div>
+
+<app-gallery [list]="characters"></app-gallery>
+
+<div class="container d-flex justify-content-center gap-3 mb-2">
+  <button class="btn btn-outline-primary btn-sm m-1" (click)="previousPage()"><<<</button>
+  <span class="m-1">Page {{charactersPage}}</span>
+  <button class="btn btn-outline-primary btn-sm m-1" (click)="nextPage()">>>></button>
+</div>
+
+
+

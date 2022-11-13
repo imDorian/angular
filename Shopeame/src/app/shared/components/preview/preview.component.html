@@ -1,0 +1,9 @@
+<div class="cardProd">
+  <img class="cardImg" *ngIf="product.image" src="{{product.image}}" alt="{{product.name}}">
+      <div class="cardBody" >
+    <!-- <h5 class="card-title">{{product.name}}</h5> -->
+    <p class="cardText">{{product.description}}</p>
+    <h2 *ngIf="product.price" class="cardPrice">${{product.price}}</h2>
+    <div class="starEdit d-flex gap-4 flex-row">
+      <!-- stars -->
+    <span>{{product.stars}}</span>

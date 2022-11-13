@@ -1,0 +1,19 @@
+<div class="taskContainer">
+  <div class="taskContainer--addTaskContainer">
+<input class="taskContainer--addTaskContainer--input" placeholder="add your new task" type="text" [(ngModel)]="newTask">
+<div class="taskContainer--btns">
+<button class="taskContainer--addTaskContainer--addTask" (click)="addTask()">Add Task</button>
+<!-- <button class="taskContainer--addTaskContainer--addTask" (click)="deleteAllDone()">Delete All Done</button> -->
+<button class="taskContainer--addTaskContainer--addTask" (click)="deleteAll()">Delete All</button>
+</div>
+</div>
+<ul class="taskContainer--task">
+  <li class="taskContainer--task--list" *ngFor="let tarea of tareas ; let index = index" [ngClass]="{'tachado': tarea.isDone}">
+    {{tarea.name}}
+    <div class="taskContainer--task--list-btns">
+      <button class="check" (click)="check(index)">Done</button>
+      <button class="remove" (click)="deleteTask(index)">Remove</button>
+    </div>
+</li>
+</ul>
+</div>

@@ -1,0 +1,15 @@
+<form class="container d-flex justify-content-center m-5 flex-column align-items-center" [formGroup]="userRegisterForm" (ngSubmit)="submit()">
+
+  <input class="mb-3" placeholder="name" type="text" formControlName="name">
+  <app-form-error *ngIf="isSubmit" [errors]="userRegisterForm.controls['name'].errors"></app-form-error>
+
+  <input class="mb-3" placeholder="email" type="text" formControlName="email">
+  <span *ngIf="isSubmit && userRegisterForm.controls['email'].errors && userRegisterForm.controls['email'].errors['required']">Este campo es requerido</span>
+  <span *ngIf="isSubmit && userRegisterForm.controls['email'].errors && userRegisterForm.controls['email'].errors['email']">Este campo tiene que ser tipo email</span>
+
+  <input class="mb-3" placeholder="description" type="text" formControlName="description">
+  <span *ngIf="isSubmit && userRegisterForm.controls['description'].errors && userRegisterForm.controls['description'].errors['required']">Este campo es requerido</span>
+  <span *ngIf="isSubmit && userRegisterForm.controls['description'].errors && userRegisterForm.controls['description'].errors['minlength']">Se requieren al menos 20 caracteres</span>
+
+  <button class="btn">Enviar</button>
+</form>

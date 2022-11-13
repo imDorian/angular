@@ -1,0 +1,17 @@
+
+<div class="container d-flex flex-row form">
+<form class="container d-grid gap-3 flex-column w-50" [formGroup]="postNewComic" (ngSubmit)="submit()">
+  <h3>Create your comic</h3>
+<input type="text" placeholder="Title" formControlName="title">
+<input type="text" placeholder="Author" formControlName="author">
+<input type="text" placeholder="Cover... For example: 'www.google.com/image.png'" formControlName="cover">
+<input type="text" placeholder="Company" formControlName="company">
+<button class="btn btn-primary">Post your comic</button>
+</form>
+
+<div class="container w-50 d-flex flex-column align-items-center">
+  <h3>Preview</h3>
+  <app-detail-comics [comic]="postNewComic.value" [display]="noDisplay"></app-detail-comics>
+</div>
+
+</div>

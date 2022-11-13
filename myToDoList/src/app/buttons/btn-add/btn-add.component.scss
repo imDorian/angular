@@ -1,0 +1,17 @@
+.btnAdd{
+  background-color: transparent;
+  color:white;
+  cursor: pointer;
+  border:solid 1px white;
+  margin-left: 20px;
+  width: 100px;
+  transition: 500ms;
+  height: 100%;
+
+  &:hover{
+    width: 200px;
+    background-color: aliceblue;
+    border: black 1px solid;
+    color:black;
+    transition: 500ms;
+  }}

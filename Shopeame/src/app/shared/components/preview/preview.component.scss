@@ -1,0 +1,59 @@
+.cardProd{
+  height: 400px;
+  width: 259px;
+  left: 0px;
+  top: 0px;
+  border-radius: 4px;
+  // border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.cardImg{
+height: 224px;
+width: 227px;
+left: 16px;
+top: 16px;
+border-radius: 4px;
+
+}
+
+.cardText{
+//styleName: Inter / Body Default;
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.0275em;
+text-align: left;
+margin: 0;
+}
+
+
+.cardPrice{
+//styleName: Inter / 24 sp • H5;
+font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+
+
+}
+
+.starEdit{
+
+
+  position: absolute;
+  bottom: 13px;
+
+}
+
+.cardBody{
+  width: 100%;
+}
+

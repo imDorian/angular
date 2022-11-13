@@ -1,0 +1,8 @@
+<div *ngFor="let moto of motos" class="moto-container">
+  <picture class="img-container"><img class="image" src="{{moto.img}}" alt="{{moto.name}}"></picture>
+  <h3 class="title">{{moto.name}}</h3>
+  <span class="price">A partir de {{moto.price}} €</span>
+  <div class="colors">
+    <app-color-box *ngFor="let color of moto.colors" [motoColor]="color.color"></app-color-box>
+  </div>
+</div>

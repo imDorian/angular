@@ -1,0 +1,12 @@
+<div class="container d-flex justify-content-center mt-2 mb-3">
+  <input [(ngModel)]="words" (input)="search()" type="text" class="search" placeholder="busca tu personaje favorito">
+</div>
+
+<div class="container d-flex flex-wrap gap-3">
+ <div class="card" *ngFor="let item of list">
+    <a routerLink="{{item.id}}">
+      <img src="{{item.image}}" alt="{{item.name}}">
+    </a>
+    <figcaption class="text-center">{{item.name}}</figcaption>
+  </div>
+</div>

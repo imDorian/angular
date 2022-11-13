@@ -1,0 +1,24 @@
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="https://comiqueros.cl/wp-content/uploads/2021/06/Batman-The-Long-Halloween-Part-One-2021-HD-1080p-y-720p-Latino-5.1-Dual-scaled.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://4.bp.blogspot.com/-fZ5m6XPs7MA/XMiZpPs4veI/AAAAAAAAcCI/2apegZ6deyAMW-owe2gxNuPoVj3pg0fiQCEwYBhgL/s640/Spiderman%2B1.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/originals/7b/92/aa/7b92aa31fc4c7821437511c4e69ff612.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div *ngFor="let comic of comics">
+  {{comic.author}}
+</div>

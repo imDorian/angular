@@ -1,0 +1,8 @@
+<div class="container d-flex flex-wrap">
+  <div *ngFor="let comic of comics" class="card m-3" style="width: 15rem ;">
+    <img routerLink="{{comic.id}}" src="{{comic.cover}}" alt="{{comic.title}}">
+    <div class="text-center">
+      <h5>{{comic.title}}</h5>
+    </div>
+  </div>
+</div>

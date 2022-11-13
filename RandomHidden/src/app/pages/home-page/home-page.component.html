@@ -1,0 +1,19 @@
+
+<div class="container-all">
+<div>
+<input class="input" type="text" placeholder="add new value" [(ngModel)]="inputValue">
+<button class="btn-1" (click)="addValue()">ADD NEW</button>
+</div>
+<div class="container" *ngFor="let item of list; let index = index">
+  <input class="input" type="text" value="{{item.name}}">
+  <div class="btns">
+  <button class="btn" (click)="restCount(index)"><</button>
+  <span class="nmb">{{item.count}}</span>
+  <button class="btn" (click)="addCount(index)">></button>
+  </div>
+  <button class="btn-rm" (click)="removeMe(index)">X</button>
+</div>
+
+
+<button class="btn-1" (click)="start()">START DEALING</button>
+</div>

@@ -1,0 +1,19 @@
+<!-- -Pintar los titulos de la lista en el html con un ul>li
+-Añadir un input y un boton para que si el usuario introduce un texto en el input
+y le hace click al boton, añada este texto como una nueva tarea en el array de listas
+con la propiedad isDone = false.
+-Añadir un botón que elimine el ultimo valor del array
+-Añadir un input type checkbox para cada tarea. si el usuario le hace click,
+la propiedad isDone de la tarea pasa al valor contrario. Añade un [ngStyle]
+o un [ngClass] para que se vea tachado el texto de las tareas con isDone = true -->
+
+<ul>
+  <li *ngFor="let tarea of list; let i = index"  [ngClass]="{'tachado': tarea.isDone}">
+    <input type="checkbox" [(ngModel)]="tarea.isDone">
+    {{tarea.title}}{{i}}
+    <button (click)="deleteMe(i)">X</button>
+</ul>
+<input type="text" [(ngModel)]="tareaNueva">
+<button (click)="add()">add me</button>
+<button (click)="deleteAll()">remove all</button>
+

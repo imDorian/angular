@@ -1,0 +1,17 @@
+
+<div class="container d-flex flex-row form">
+  <form class="d-grid gap-3 flex-column w-50" [formGroup]="postNewProduct" (ngSubmit)="submit()">
+    <h3>Creación/edición de productos</h3>
+  <input type="text" placeholder="name" formControlName="name">
+  <input type="text" placeholder="description" formControlName="description">
+  <input type="text" placeholder="image" formControlName="image">
+  <input type="text" placeholder="price" formControlName="price">
+  <input type="text" placeholder="stars" formControlName="stars">
+  <button class="btn btn-primary">Post your product</button>
+  </form>
+
+  <div class="w-50 d-flex flex-column align-items-center">
+    <h3>Vista previa del producto</h3>
+    <app-preview [product]="postNewProduct.value"></app-preview>
+  </div>
+  </div>
